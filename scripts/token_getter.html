@@ -6,18 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Account Token Getter</title>
-    <link rel="stylesheet" href="/assets/css/token_getter.css">
+    <link rel="stylesheet" href="../assets/css/token_getter.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <script src="../assets/js/hcaptcha_api.js" async=""></script>
 </head>
 
 <body>
     <div class="navbar">
         Discord Token Getter<span>by Pure</span>
     </div>
-    <div class="mbody">
-        <div class="logincontainer">
-
+    <div class="mbody" id="body">
+        <div class="logincontainer" id="logincontainer">
+            <Label id="emaillabel">E-Mail</Label>
+            <input type="email" id="email" required>
+            <Label id="passlabel">Password</Label>
+            <input type="password" id="pass" required>
+            <div class="button" onclick="submitLogin()">
+                Submit
+            </div>
         </div>
+        <div class="captchacontainer invis" id="captchacontainer">
+            <div id="captcha"></div>
+        </div>
+        <div class="mfacontainer invis" id="mfacontainer">
+            <div id="ticket" class="invis"></div>
+            <h3>Two-factor authentication</h3>
+            <h4>You can use a backup code or your two-factor authentication mobile app.</h4>
+            <label id="mfalabel">Enter Discord Auth/Backup Code</label>
+            <input type="text" id="mfacode" placeholder="6-digit authentication code/8-digit backup code">
+            <div class="button" onclick="submitMFA()">
+                Submit
+            </div>
+        </div>
+        <div class="unknowncontainer invis" id="unknowncontainer">
+            <h3>An unknown error has occurred.</h3>
+            <pre class="unknowntext" id="unknowntext"></pre>
+            <div class="button" onclick="newAccount()">
+                Try Again
+            </div>
+        </div>
+        <div class="tokencontainer invis" id="tokencontainer">
+            <h4>Accounts Token:</h4>
+            <div class="tokencont">
+                <input type="text" id="token" disabled value="LASDKLŞASDKASKLŞDSDKLŞASDKLASDLŞKSALŞKD">
+                <div class="button" onclick="copyToken(this)">
+                    Copy
+                </div>
+            </div>
+            <div class="button" onclick="newAccount()">
+                Get another token
+            </div>
+        </div>
+        <a class="footer" id="nontouch" href="https://github.com/PureSci/PureSci.github.io" target="_blank">
+            <img width="62px" height="62px"
+                src="https://static.wixstatic.com/media/0fcd80_c46e6d3aaac4455ca5401173df3f5583~mv2.png/v1/fill/w_62,h_62,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/GitHub-Mark-Light-120px-plus.png">
+            <h4>This project is completely open source and free.</h4>
+        </a>
     </div>
+    <script src="../assets/js/token_getter.js"></script>
 </body>
 
 </html>

@@ -1,57 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-body {
-    background-color: #131518;
-    margin: 20px;
-    font-family: var(--font-standard);
-    font-weight: 600;
-}
-
-* {
-    color: #ecf9fb;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.mbody {
-    height: calc(100vh - 118.5px);
-    background-color: #1a1c21;
-    border-radius: 1rem;
+.logincontainer {
+    width: 394px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.navbar {
-    margin: 20px;
-    font-size: xx-large;
+.logincontainer>label:focus,
+.logincontainer>label:valid {
+    display: none;
+}
+
+.req {
+    color: #f38688;
+}
+
+.prob {
+    font-style: italic;
+    font-weight: 500;
+    color: #f38688;
+}
+
+@media only screen and (max-width:500px) {
+
+    .logincontainer {
+        width: 330px;
+    }
+
+    .mfacontainer {
+        width: 380px;
+    }
+
+    .unknowncontainer {
+        width: 360px;
+    }
+
+    .tokencont {
+        width: 85vw !important;
+    }
+
+    .tokencont>input {
+        width: 75vw !important;
+        margin-left: 0px;
+    }
+}
+
+.invis {
+    display: none !important;
+}
+
+iframe {
+    height: 78px;
+    width: 303px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.string {
+    color: green;
+}
+
+.number {
+    color: darkorange;
+}
+
+.boolean {
+    color: blue;
+}
+
+.null {
+    color: magenta;
+}
+
+.key {
+    color: red;
+}
+
+.mfacontainer {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+.unknowncontainer {
+    width: 420px;
+}
+
+.unknowntext {
+    font-weight: 500;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.tokencontainer {
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.navbar>span {
-    font-size: medium;
+.tokencont>input {
+    width: 100%;
 }
 
-.logincontainer {
-    width: 500px;
+.tokencontainer>h4 {
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-@media only screen and (max-width:500px) {
-    .mbody {
-        width: 100%;
-        border-radius: 0rem;
-        height: calc(100vh - 78.5px);
-    }
+.tokencont {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
 
-    body {
-        margin: 0;
-        height: 100vh;
-    }
-
-    .navbar {
-        font-size: x-large;
-        margin: 0;
-        margin-bottom: 15px;
-        padding-top: 15px;
-    }
+.tokencont>.button {
+    width: 79px;
+    margin: 0;
+    padding: 10px;
 }

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background-color: #131518;
+    margin: 20px;
+    font-family: var(--font-standard);
+    font-weight: 600;
+}
+
+* {
+    color: #ecf9fb;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mbody {
+    height: calc(100vh - 118.5px);
+    background-color: #1a1c21;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    margin: 20px;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar>span {
+    font-size: medium;
+}
+
+label {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: #b0bac5;
+}
+
+input {
+    all: unset;
+    background-color: #3e434b;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    height: 20px;
+    padding: 10px;
+}
+
+.button {
+    text-align: center;
+    margin-top: 37px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #5865f2;
+    padding: 14px;
+    cursor: pointer;
+}
+
+
+.sbody>h3 {
+    color: #b9bbbe;
+    margin: 0;
+    font-size: x-large;
+}
+
+.textl {
+    font-size: x-large;
+}
+
+.button:hover {
+    background-color: #4752c4;
+}
+
+@media only screen and (max-width:500px) {
+    .mbody {
+        width: 100%;
+        border-radius: 0rem;
+        height: calc(100vh - 78.5px);
+    }
+
+    body {
+        margin: 0;
+        height: 100vh;
+    }
+
+    .navbar {
+        font-size: x-large;
+        margin: 0;
+        margin-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .footer {
+        bottom: 0 !important;
+    }
+
+}
+
+.footer {
+    all: unset;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer>h4 {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sbody {
+    width: 280px;
+    margin: 35px;
+}
